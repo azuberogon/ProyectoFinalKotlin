@@ -24,6 +24,7 @@ public class Sqlite extends AppCompatActivity {
             public void onClick(View view) {
                 DbHelper dbHelper = new DbHelper(Sqlite.this);
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
+
                 if (db != null){
                     Toast.makeText(Sqlite.this, "BASE DE DATOS CREADA", Toast.LENGTH_LONG).show();
 
