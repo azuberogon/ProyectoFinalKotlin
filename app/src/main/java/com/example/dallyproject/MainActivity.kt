@@ -35,7 +35,7 @@ open class MainActivity : AppCompatActivity() {
         btnSiguiente = findViewById(R.id.btnSiguiente)// desde aqui se inicia el boton
         btnSiguiente.setOnClickListener {
 
-            if (textoUsuario.isBlank() || editTextContrasenia.isBlank()) {
+            if (textoUsuario.isEmpty()) {
                 // Mostrar un mensaje de error utilizando Toast
                 Toast.makeText(applicationContext, "Por favor ingrese un usuario", Toast.LENGTH_SHORT).show()
 

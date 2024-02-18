@@ -29,9 +29,9 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) { //crear la base de datos esto es una prueba
         db.execSQL("CREATE TABLE "+ TABLE_CONTACTOS+ "(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "nombre INTEGER NOT NULL, " +
+                "nombre TEXT NOT NULL, " +
                 "contrasenia TEXT NOT NULL," +
-                "telefono TEXT NOT NULL," +
+                "telefono int NOT NULL," +
                 "correo_electronico TEXT)");
     }
 
@@ -160,7 +160,7 @@ public class DbHelper extends SQLiteOpenHelper {
         db.close();
         return exito;
     }
-/* todo : comrprobar que ocurre y como saber quien esta en la sql 
+/* todo : comrprobar que ocurre y como saber quien esta en la sql
 
 
 
