@@ -46,11 +46,13 @@ public class DbHelper extends SQLiteOpenHelper {
         contentValues.put("nombre", "Juan");//se crea el objeto separado esto hay que cambiarlo par que meta objetos en la base de datos
         contentValues.put("telefono", "123456789");
         contentValues.put("correo_electronico", "juan@example.com");
+        contentValues.put("contrasenia", "123");
         db.insert(TABLE_CONTACTOS, null, contentValues);
         System.out.println("SEGUNDO INSERT");
         contentValues.put("nombre", "Maria");
         contentValues.put("telefono", "987654321");
         contentValues.put("correo_electronico", "maria@example.com");
+        contentValues.put("contrasenia", "123");
         db.insert(TABLE_CONTACTOS, null, contentValues);
         db.close();
 
