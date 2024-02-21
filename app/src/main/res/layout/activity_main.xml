@@ -4,7 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bginicio">
+
+
+    <!-- android:background="#80FFFFFF"  esto sirve para jugar con la transparencia del objeto-->
+
+
+
 
     <EditText
         android:id="@+id/inpTxtUsuario"
