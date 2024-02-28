@@ -2,4 +2,9 @@
 plugins {
     id("com.android.application") version "8.1.4" apply false
     id("org.jetbrains.kotlin.android") version "1.9.0" apply false
+    id("org.jetbrains.dokka") version "1.9.10" apply true
+}
+
+subprojects {
+    apply(plugin = "org.jetbrains.dokka")
 }
