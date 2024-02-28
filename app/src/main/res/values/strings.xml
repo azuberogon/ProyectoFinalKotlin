@@ -11,4 +11,7 @@
     <string name="nombre">Nombre</string>
     <string name="pais">Pais</string>
     <string name="dd_mm_aaaa">DD/MM/AAAA</string>
+    <string name="telefono">Telefono</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="enviar">Enviar</string>
 </resources>
