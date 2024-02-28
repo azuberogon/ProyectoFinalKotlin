@@ -1,11 +1,12 @@
-package com.example.dallyproject
+package com.example.dallyproject.hugo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.dallyproject.R
 
-class NuevoObjetivo : AppCompatActivity() {
+class Ajustes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nuevo_objetivo)
+        setContentView(R.layout.activity_ajustes)
     }
 }
