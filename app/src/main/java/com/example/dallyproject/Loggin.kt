@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.dallyproject.db.DbHelper
 
-class Loggin : AppCompatActivity() {
+class loggin : AppCompatActivity() {
     private lateinit var inputTxtNombre: EditText
     private lateinit var inputTxtApellidos: EditText
     private lateinit var inputTxtContraseña: EditText
@@ -42,7 +42,7 @@ class Loggin : AppCompatActivity() {
 
         btnEnviar.setOnClickListener {
 
-            val intent = Intent(this@Loggin, Menu_inicio :: class.java )
+            val intent = Intent(this@loggin, menu_inicio :: class.java )
             startActivity(intent)
             val  numeroTel = convertirEditTextAEntero(inputTxtTelefono)
             if (numeroTel != null) {

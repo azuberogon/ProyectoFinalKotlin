@@ -1,0 +1,45 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.dallyproject.Hugo////PointingToDeclaration/app/com.example.dallyproject.Hugo/index.html
+$dokka.location:com.example.dallyproject.Hugo/ajustes///PointingToDeclaration/app/com.example.dallyproject.Hugo/ajustes/index.html
+$dokka.location:com.example.dallyproject.Hugo/ajustes/ajustes/#/PointingToDeclaration/app/com.example.dallyproject.Hugo/ajustes/ajustes.html
+$dokka.location:com.example.dallyproject.Hugo/diario///PointingToDeclaration/app/com.example.dallyproject.Hugo/diario/index.html
+$dokka.location:com.example.dallyproject.Hugo/diario/diario/#/PointingToDeclaration/app/com.example.dallyproject.Hugo/diario/diario.html
+$dokka.location:com.example.dallyproject.Hugo/nueva_actividad///PointingToDeclaration/app/com.example.dallyproject.Hugo/nueva_actividad/index.html
+$dokka.location:com.example.dallyproject.Hugo/nueva_actividad/nueva_actividad/#/PointingToDeclaration/app/com.example.dallyproject.Hugo/nueva_actividad/nueva_actividad.html
+$dokka.location:com.example.dallyproject.Imanol////PointingToDeclaration/app/com.example.dallyproject.Imanol/index.html
+$dokka.location:com.example.dallyproject.Imanol/nuevos_objetivos///PointingToDeclaration/app/com.example.dallyproject.Imanol/nuevos_objetivos/index.html
+$dokka.location:com.example.dallyproject.Imanol/nuevos_objetivos/nuevos_objetivos/#/PointingToDeclaration/app/com.example.dallyproject.Imanol/nuevos_objetivos/nuevos_objetivos.html
+$dokka.location:com.example.dallyproject.Imanol/objetivos///PointingToDeclaration/app/com.example.dallyproject.Imanol/objetivos/index.html
+$dokka.location:com.example.dallyproject.Imanol/objetivos/objetivos/#/PointingToDeclaration/app/com.example.dallyproject.Imanol/objetivos/objetivos.html
+$dokka.location:com.example.dallyproject.Imanol/sign_up///PointingToDeclaration/app/com.example.dallyproject.Imanol/sign_up/index.html
+$dokka.location:com.example.dallyproject.Imanol/sign_up/sign_up/#/PointingToDeclaration/app/com.example.dallyproject.Imanol/sign_up/sign_up.html
+$dokka.location:com.example.dallyproject.db////PointingToDeclaration/app/com.example.dallyproject.db/index.html
+$dokka.location:com.example.dallyproject.db/DbHelper///PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/index.html
+$dokka.location:com.example.dallyproject.db/DbHelper/DbHelper/#android.content.Context/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/-db-helper.html
+$dokka.location:com.example.dallyproject.db/DbHelper/TABLE_CONTACTOS/#/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/-t-a-b-l-e_-c-o-n-t-a-c-t-o-s.html
+$dokka.location:com.example.dallyproject.db/DbHelper/autenticar/#java.lang.String#java.lang.String/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/autenticar.html
+$dokka.location:com.example.dallyproject.db/DbHelper/buscarUsuario/#java.lang.String#java.lang.String/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/buscar-usuario.html
+$dokka.location:com.example.dallyproject.db/DbHelper/crearUsuario/#java.lang.String#java.lang.String#int#java.lang.String/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/crear-usuario.html
+$dokka.location:com.example.dallyproject.db/DbHelper/onCreate/#android.database.sqlite.SQLiteDatabase/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/on-create.html
+$dokka.location:com.example.dallyproject.db/DbHelper/onUpgrade/#android.database.sqlite.SQLiteDatabase#int#int/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/on-upgrade.html
+$dokka.location:com.example.dallyproject.db/DbHelper/test/#/PointingToDeclaration/app/com.example.dallyproject.db/-db-helper/test.html
+$dokka.location:com.example.dallyproject////PointingToDeclaration/app/com.example.dallyproject/index.html
+$dokka.location:com.example.dallyproject/MainActivity///PointingToDeclaration/app/com.example.dallyproject/-main-activity/index.html
+$dokka.location:com.example.dallyproject/MainActivity/MainActivity/#/PointingToDeclaration/app/com.example.dallyproject/-main-activity/-main-activity.html
+$dokka.location:com.example.dallyproject/Sqlite///PointingToDeclaration/app/com.example.dallyproject/-sqlite/index.html
+$dokka.location:com.example.dallyproject/Sqlite/Sqlite/#/PointingToDeclaration/app/com.example.dallyproject/-sqlite/-sqlite.html
+$dokka.location:com.example.dallyproject/calendario///PointingToDeclaration/app/com.example.dallyproject/calendario/index.html
+$dokka.location:com.example.dallyproject/calendario/calendario/#/PointingToDeclaration/app/com.example.dallyproject/calendario/calendario.html
+$dokka.location:com.example.dallyproject/calendario_Dia///PointingToDeclaration/app/com.example.dallyproject/calendario_-dia/index.html
+$dokka.location:com.example.dallyproject/calendario_Dia/calendario_Dia/#/PointingToDeclaration/app/com.example.dallyproject/calendario_-dia/calendario_-dia.html
+$dokka.location:com.example.dallyproject/loggin///PointingToDeclaration/app/com.example.dallyproject/loggin/index.html
+$dokka.location:com.example.dallyproject/loggin/convertirEditTextAEntero/#android.widget.EditText/PointingToDeclaration/app/com.example.dallyproject/loggin/convertir-edit-text-a-entero.html
+$dokka.location:com.example.dallyproject/loggin/loggin/#/PointingToDeclaration/app/com.example.dallyproject/loggin/loggin.html
+$dokka.location:com.example.dallyproject/menu_inicio///PointingToDeclaration/app/com.example.dallyproject/menu_inicio/index.html
+$dokka.location:com.example.dallyproject/menu_inicio/menu_inicio/#/PointingToDeclaration/app/com.example.dallyproject/menu_inicio/menu_inicio.html
+com.example.dallyproject
+com.example.dallyproject.Hugo
+com.example.dallyproject.Imanol
+com.example.dallyproject.db
+

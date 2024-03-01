@@ -4,66 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".imanol.SignUp">
+    tools:context=".Imanol.sign_up">
 
-    <TextView
-        android:id="@+id/txtSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textSize="25sp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/inpTxtUsuario"
-        style="@style/estiloTextoEntradaSignUp"
-        android:layout_height="48dp"
-        android:hint="@string/username"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSignup" />
-
-    <EditText
-        android:id="@+id/inpTxtEmail"
-        style="@style/estiloTextoEntradaSignUp"
-        android:layout_height="48dp"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpTxtUsuario" />
-
-    <EditText
-        android:id="@+id/inpTxtPassword"
-        style="@style/estiloTextoEntradaSignUp"
-        android:layout_height="48dp"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpTxtEmail" />
-
-    <EditText
-        android:id="@+id/inpTxtConfirmPsswrd"
-        style="@style/estiloTextoEntradaSignUp"
-        android:layout_height="48dp"
-        android:hint="@string/confirm_password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpTxtPassword" />
-
-    <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpTxtConfirmPsswrd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

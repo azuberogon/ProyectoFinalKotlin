@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_inicio">
-
+    tools:context=".menu_inicio">
     <TextView
         android:id="@+id/textView"
         android:layout_width="418dp"
