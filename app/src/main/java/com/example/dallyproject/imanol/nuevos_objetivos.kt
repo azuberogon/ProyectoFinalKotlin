@@ -1,4 +1,4 @@
-package com.example.dallyproject.Imanol
+package com.example.dallyproject.imanol
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

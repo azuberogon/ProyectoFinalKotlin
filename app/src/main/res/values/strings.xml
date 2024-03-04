@@ -23,4 +23,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="email">Email</string>
+    <string name="Username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="Sign_up">Sign Up</string>
+    <string name="Pregunta_cuentaExistente">¿Ya tienes una cuenta?</string>
+    <string name="Navegacion">Log in</string>
 </resources>

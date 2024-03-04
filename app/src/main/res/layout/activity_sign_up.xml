@@ -9,9 +9,10 @@
     <EditText
         android:id="@+id/inputTxtNombre"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
         android:ems="10"
-        android:hint="@string/nombre"
+        android:hint="@string/Username"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/inputTxtEmail"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +25,8 @@
     <EditText
         android:id="@+id/inputTxtEmail"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="36dp"
         android:ems="10"
         android:hint="@string/email"
@@ -38,10 +40,11 @@
     <EditText
         android:id="@+id/inputTxtContrasenia"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="36dp"
         android:ems="10"
-        android:hint="@string/confirmar_contrase_a"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/inputTxtContraseniaRepetir"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,10 +55,11 @@
     <EditText
         android:id="@+id/inputTxtContraseniaRepetir"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="@string/contrasenia"
+        android:hint="@string/confirm_password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnCancelar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +71,8 @@
         android:id="@+id/btnCancelar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cancelar"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/Sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -75,5 +80,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.767" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCancelar">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Pregunta_cuentaExistente"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnNavegacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Navegacion"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
