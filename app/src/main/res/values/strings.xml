@@ -29,4 +29,5 @@
     <string name="Sign_up">Sign Up</string>
     <string name="Pregunta_cuentaExistente">¿Ya tienes una cuenta?</string>
     <string name="Navegacion">Log in</string>
+    <string name="apellidos">apellidos</string>
 </resources>
