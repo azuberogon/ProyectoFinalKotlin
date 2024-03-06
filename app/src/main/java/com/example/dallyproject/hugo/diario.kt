@@ -1,4 +1,4 @@
-package com.example.dallyproject.Hugo
+package com.example.dallyproject.hugo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
