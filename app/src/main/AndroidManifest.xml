@@ -13,31 +13,31 @@
         android:theme="@style/Theme.DallyProject"
         tools:targetApi="31">
         <activity
-            android:name=".Imanol.sign_up"
+            android:name=".imanol.SignUp"
             android:exported="false" />
         <activity
-            android:name=".Imanol.objetivos"
+            android:name=".imanol.Objetivos"
             android:exported="false" />
         <activity
-            android:name=".Imanol.nuevos_objetivos"
+            android:name=".imanol.NuevoObjetivo"
             android:exported="false" />
         <activity
-            android:name=".Hugo.nueva_actividad"
+            android:name=".hugo.NuevaActividad"
             android:exported="false" />
         <activity
-            android:name=".menu_inicio"
+            android:name=".Menu_inicio"
             android:exported="false" />
         <activity
-            android:name=".loggin"
+            android:name=".Loggin"
             android:exported="false" />
         <activity
-            android:name=".Hugo.diario"
+            android:name=".hugo.Diario"
             android:exported="false" />
         <activity
-            android:name=".calendario_Dia"
+            android:name=".Calendario_Dia"
             android:exported="false" />
         <activity
-            android:name=".Hugo.ajustes"
+            android:name=".hugo.Ajustes"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
