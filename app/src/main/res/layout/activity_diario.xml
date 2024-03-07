@@ -27,11 +27,13 @@
             android:layout_gravity="bottom|center"
             android:text="Guardar" />
 
-        <CheckBox
-            android:id="@+id/ssss1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CheckBox" />
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="584dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name" />
 
     </FrameLayout>
 
