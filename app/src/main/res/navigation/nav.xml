@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@+id/page_inicio">
+
+    <fragment
+        android:id="@+id/page_inicio"
+        android:name="com.example.dallyproject.menu_inicio"
+        tools:layout="@layout/activity_menu_inicio" />
+
+    <fragment
+        android:id="@+id/page_calendario"
+        android:name="com.example.dallyproject.calendario"
+        tools:layout="@layout/activity_calendario" />
+
+    <fragment
+        android:id="@+id/page_objetivos"
+        android:name="com.example.dallyproject.imanol.Objetivos"
+        tools:layout="@layout/activity_objetivos" />
+
+    <fragment
+        android:id="@+id/page_configuraciones"
+        android:name="com.example.dallyproject.hugo.ajustes"
+        tools:layout="@layout/activity_ajustes" />
+</navigation>
