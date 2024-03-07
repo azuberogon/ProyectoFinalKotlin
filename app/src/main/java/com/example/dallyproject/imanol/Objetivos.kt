@@ -29,16 +29,17 @@ class Objetivos : Fragment(R.layout.activity_objetivos) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.activity_objetivos, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+            super.onViewCreated(view, savedInstanceState)
 
-        // Supongamos que tienes una lista de temáticas de objetivos
-        //val listaTematicas = mutableListOf<TematicaObjetivos>()
-        //listaTematicas.add(TematicaObjetivos("Tema 1", 50))
-        //listaTematicas.add(TematicaObjetivos("Tema 2", 75))
-        // Añade más temáticas si es necesario
+            val listaTematicas = mutableListOf<TematicaObjetivos>()
+            listaTematicas.add(TematicaObjetivos("Tema 1", 50))
+            listaTematicas.add(TematicaObjetivos("Tema 2", 75))
+            // Puedes agregar más instancias de TematicaObjetivos aquí según sea necesario
 
-        //recyclerViewTematicas = findViewById(R.id.recyclerViewObjetivos)
-        // Configurar RecyclerView
-        //tematicasAdapter = TematicasObjetivosAdapter(listaTematicas)
-        //recyclerViewTematicas.layoutManager = LinearLayoutManager(this)
-        //recyclerViewTematicas.adapter = tematicasAdapter
+            val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewObjetivos)
+            val adapter = TematicasObjetivosAdapter(listaTematicas)
+            recyclerView.adapter = adapter
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
+}
