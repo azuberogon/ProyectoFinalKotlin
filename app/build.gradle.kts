@@ -34,6 +34,7 @@ android {
         jvmTarget = "1.8"
     }
 }
+
 tasks.dokkaJavadoc.configure {
     outputDirectory.set(file("../documentation/Javadoc"))
 }
@@ -61,4 +62,8 @@ dependencies {
     implementation("org.jetbrains.dokka:android-documentation-plugin:1.9.10")
 
 
+    implementation("com.google.firebase:firebase-bom:32.7.3")
+    implementation("com.google.firebase:firebase-firestore:24.10.3")
+    implementation("com.google.firebase:firebase-database:20.3.1")
+    implementation("com.google.firebase:firebase-messaging:23.4.1")
 }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "887317531130",
+    "project_id": "fir-calendar-app-a78b7",
+    "storage_bucket": "fir-calendar-app-a78b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887317531130:android:ec724c356347fda9a37c43",
+        "android_client_info": {
+          "package_name": "com.example.dallyproject.Calendario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5-YqSJ_aYamkhj5YmpRCoRpVOfqes3gE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
