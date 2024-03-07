@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.dallyproject.databinding.ActivityMainBinding
+import com.example.dallyproject.richi.menu
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         btnSiguiente = findViewById(R.id.btnSiguiente)
         btnSiguiente.setOnClickListener{
             // Crea un Intent que describe la transición a la MainInternaActivity
-            val intent = Intent(this, MainActivityInterna::class.java)
+            val intent = Intent(this, menu::class.java)
             // Inicia la actividad
             startActivity(intent)
         }

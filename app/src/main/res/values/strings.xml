@@ -36,4 +36,9 @@
     <string name="nombre_del_evento">Nombre del evento</string>
     <string name="guardar">Guardar calendario</string>
     <string name="apellidos">apellidos</string>
+    <string name="app_agenda">App agenda</string>
+    <string name="calendario">CALENDARIO</string>
+    <string name="objetivos">OBJETIVOS</string>
+    <string name="ajustes">AJUSTES</string>
+    <string name="men">MENÚ</string>
 </resources>

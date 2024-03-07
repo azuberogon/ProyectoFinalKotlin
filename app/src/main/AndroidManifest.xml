@@ -13,13 +13,16 @@
         android:theme="@style/Theme.DallyProject"
         tools:targetApi="31">
         <activity
+            android:name=".richi.menu"
+            android:exported="false" />
+        <activity
             android:name=".imanol.sign_up"
             android:exported="false" />
         <activity
             android:name=".imanol.Objetivos"
             android:exported="false" />
         <activity
-            android:name=".imanol.nuevos_objetivos"
+            android:name=".imanol.NuevoObjetivo.nuevos_objetivos"
             android:exported="false" />
         <activity
             android:name=".hugo.nueva_actividad"
@@ -50,8 +53,7 @@
         </activity>
         <activity
             android:name=".MainActivityInterna"
-            android:exported="false"/>
-
+            android:exported="false" />
     </application>
 
 </manifest>
