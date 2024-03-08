@@ -41,4 +41,7 @@
     <string name="objetivos">OBJETIVOS</string>
     <string name="ajustes">AJUSTES</string>
     <string name="men">MENÚ</string>
+    <string name="txtExplicacion">Escribe aquí la temática de tu nueva barra de progreso y el lugar en el que se va a llevar a cabo</string>
+    <string name="lugar">Lugar</string>
+    <string name="guardar2">Guardar</string>
 </resources>

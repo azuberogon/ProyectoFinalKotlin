@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16sp"
         android:padding="16dp"
-        android:text="keloke"
         android:textAlignment="viewStart"
         android:textSize="25sp"
         android:textStyle="bold" />

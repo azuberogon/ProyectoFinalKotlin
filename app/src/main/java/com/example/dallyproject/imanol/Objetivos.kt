@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.example.dallyproject.R
 import com.example.dallyproject.databinding.ActivityObjetivosBinding
 
-class Objetivos : Fragment(R.layout.activity_objetivos) {
-    //private lateinit var tematicasAdapter: TematicasObjetivosAdapter
-    //private lateinit var recyclerViewTematicas: RecyclerView
+class Objetivos : AppCompatActivity() {
+
     private lateinit var binding: ActivityObjetivosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
