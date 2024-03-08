@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         btnSiguiente = findViewById(R.id.btnSiguiente)
         btnSiguiente.setOnClickListener{
             // Crea un Intent que describe la transición a la MainInternaActivity
-            val intent = Intent(this, menu::class.java)
+            val intent = Intent(this, MainActivityInterna::class.java)
             // Inicia la actividad
             startActivity(intent)
         }

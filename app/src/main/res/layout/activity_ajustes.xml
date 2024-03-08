@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/swDarkMode"
         android:layout_width="261dp"
         android:layout_height="46dp"
         android:text="Modo Oscuro"

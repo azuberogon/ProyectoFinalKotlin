@@ -22,7 +22,7 @@
             android:name=".imanol.Objetivos"
             android:exported="false" />
         <activity
-            android:name=".imanol.NuevoObjetivo.nuevos_objetivos"
+            android:name=".imanol.Nuevos_objetivos"
             android:exported="false" />
         <activity
             android:name=".hugo.nueva_actividad"
