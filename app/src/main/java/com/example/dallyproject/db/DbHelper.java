@@ -60,8 +60,6 @@ public class DbHelper extends SQLiteOpenHelper {
         db.close();
 
     }
-
-
     public Boolean crearUsuario(String nombre,String contrasenia,int numTelefono ,String correoElectronico){
 
         if (!buscarUsuario(nombre,contrasenia)){
@@ -80,9 +78,6 @@ public class DbHelper extends SQLiteOpenHelper {
         }
 
     }
-
-
-
 
     public boolean buscarUsuario(String nombre, String contrasenia) {
         SQLiteDatabase db = this.getReadableDatabase();
