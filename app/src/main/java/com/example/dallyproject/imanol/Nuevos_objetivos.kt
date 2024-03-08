@@ -2,6 +2,7 @@ package com.example.dallyproject.imanol
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import com.example.dallyproject.R
@@ -36,8 +37,8 @@ class Nuevos_objetivos : AppCompatActivity() {
 
             GlobalScope.launch(Dispatchers.IO) {
                 localDB.tematicasDao().insertAll(tematica)
+                Log.d("Nuevos_objetivos", "Tematica insertada correctamente")
             }
-
         }
     }
 }
