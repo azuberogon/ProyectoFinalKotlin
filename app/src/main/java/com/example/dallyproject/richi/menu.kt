@@ -7,7 +7,7 @@ import android.widget.Button
 import com.example.dallyproject.Calendario.Calendario
 import com.example.dallyproject.R
 import com.example.dallyproject.hugo.ajustes
-import com.example.dallyproject.imanol.Objetivos
+
 
 class menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +25,7 @@ class menu : AppCompatActivity() {
 
         btnOption2.setOnClickListener {
             // Para ir a la actividad objetivos
-            startActivity(Intent(this, Objetivos::class.java))
+            //startActivity(Intent(this, Objetivos::class.java))
         }
 
         btnOption3.setOnClickListener {
