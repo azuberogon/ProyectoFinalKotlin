@@ -33,6 +33,4 @@ class Objetivos : Fragment() {
             startActivity(intent)
         }
     }
-
-
 }
