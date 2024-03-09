@@ -22,4 +22,7 @@ interface TematicasDAO {
 
     @Delete
     fun delete(tematica: TematicaEntity)
+
+    @Query("DELETE FROM tematicaentity")
+    fun deleteAll()
 }

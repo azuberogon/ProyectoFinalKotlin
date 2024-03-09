@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -23,10 +24,10 @@ class Objetivos : Fragment() {
     private lateinit var btnAgregar : Button
     private lateinit var recyclerView : RecyclerView
     private lateinit var adapter: RecyclerViewAdapter
+    private lateinit var btnEliminarTodo : FloatingActionButton
 
     private var listaNombres: ArrayList<Any> = ArrayList()
     private var listaLugares: ArrayList<Any> = ArrayList()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,6 +41,7 @@ class Objetivos : Fragment() {
 
         btnAgregar = view.findViewById(R.id.btnAgregarTematica)
         recyclerView = view.findViewById(R.id.recyclerViewObjetivos)
+        btnEliminarTodo = view.findViewById(R.id.btnVaciarRecyclerView)
 
         adapter = RecyclerViewAdapter(requireContext(), listaNombres, listaLugares)
         recyclerView.adapter = adapter
@@ -51,6 +53,18 @@ class Objetivos : Fragment() {
             val intent = Intent(requireActivity(), Nuevos_objetivos::class.java)
             startActivity(intent)
             displayData() // Llama a displayData después de agregar un nuevo elemento
+        }
+        btnEliminarTodo.setOnClickListener {
+            // Elimina todos los elementos de las listas
+            listaNombres.clear()
+            listaLugares.clear()
+            // Notifica al adaptador que los datos han cambiado
+            adapter.notifyDataSetChanged()
+
+            GlobalScope.launch(Dispatchers.IO) {
+                val localDB = LocalDatabase.getInstance(requireContext())
+                localDB.tematicasDao().deleteAll()
+            }
         }
     }
 
