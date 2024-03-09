@@ -1,6 +1,5 @@
 package com.example.dallyproject.imanol
 import android.content.Intent
-import android.database.Cursor
 import android.os.Bundle
 import android.widget.Button
 import com.example.dallyproject.R
@@ -35,7 +34,6 @@ class Objetivos : Fragment() {
         binding = ActivityObjetivosBinding.inflate(inflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

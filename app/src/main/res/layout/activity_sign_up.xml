@@ -31,14 +31,14 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/inputTxtContrasenia"
+        app:layout_constraintBottom_toTopOf="@+id/inputTxtContraseina"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/inputTxtContrasenia"
+        android:id="@+id/inputTxtContraseina"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"
@@ -46,14 +46,14 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/inputTxtContraseniaRepetir"
+        app:layout_constraintBottom_toTopOf="@+id/inputTxtRepetirContrasenia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/inputTxtContraseniaRepetir"
+        android:id="@+id/inputTxtRepetirContrasenia"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"
@@ -61,14 +61,14 @@
         android:ems="10"
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnCancelar"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrarse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnCancelar"
+        android:id="@+id/btnRegistrarse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -88,7 +88,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCancelar">
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarse">
 
         <TextView
             android:id="@+id/textView2"
@@ -99,7 +99,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/btnNavegacion"
+            android:id="@+id/btnLogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
