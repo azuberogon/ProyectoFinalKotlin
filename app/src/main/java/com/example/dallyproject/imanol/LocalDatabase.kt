@@ -4,25 +4,24 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.google.firebase.firestore.auth.User
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [TematicaEntity::class], version = 1)
 abstract class LocalDatabase : RoomDatabase() {
     abstract fun tematicasDao(): TematicasDAO
 
     companion object {
+        private const val DATABASE_NAME="Proyecto.db"
         @Volatile
         private var INSTANCE: LocalDatabase? = null
 
         fun getInstance(context: Context): LocalDatabase {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    LocalDatabase::class.java,
-                    "Proyecto.db"
-                ).build()
-                INSTANCE = instance
-                instance
+            synchronized(this){
+                var instance = INSTANCE
+                if (instance == null){
+                    instance = Room.databaseBuilder(context.applicationContext, LocalDatabase::class.java, DATABASE_NAME).build()
+                    INSTANCE = instance
+                }
+                return instance
             }
         }
     }

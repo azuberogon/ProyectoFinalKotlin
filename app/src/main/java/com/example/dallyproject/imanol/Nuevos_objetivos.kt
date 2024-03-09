@@ -1,5 +1,6 @@
 package com.example.dallyproject.imanol
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -31,13 +32,28 @@ class Nuevos_objetivos : AppCompatActivity() {
             finish()
         }
         btnGuardar.setOnClickListener {
-            var tematica = TematicaEntity(nombre.text.toString(), lugar.text.toString())
+            val tematica = TematicaEntity(nombre.text.toString(), lugar.text.toString())
 
-            var localDB = LocalDatabase.getInstance(this)
+            val localDB = LocalDatabase.getInstance(this)
 
             GlobalScope.launch(Dispatchers.IO) {
-                localDB.tematicasDao().insertAll(tematica)
-                Log.d("Nuevos_objetivos", "Tematica insertada correctamente")
+                try {
+                    val insertado = localDB.tematicasDao().insertAll(tematica)
+                    if (insertado.isNotEmpty()) {
+                        // Se insertaron filas exitosamente
+                        Log.d("Nuevos_objetivos", "Tematica insertada correctamente")
+                        // Navegar automáticamente a la ventana Objetivos
+                        startActivity(Intent(this@Nuevos_objetivos, Objetivos::class.java))
+                        // Finalizar la actividad actual
+                        finish()
+                    } else {
+                        // No se insertaron filas
+                        Log.d("Nuevos_objetivos", "No se pudo insertar la tematica")
+                    }
+                } catch (e: Exception) {
+                    // Si ocurre algún error durante la inserción, se captura aquí
+                    Log.e("Nuevos_objetivos", "Error al insertar la tematica: ${e.message}")
+                }
             }
         }
     }
