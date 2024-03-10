@@ -1,31 +1,44 @@
 package com.example.dallyproject
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.dallyproject.databinding.ActivityMenuInicioBinding
 
-class menu_inicio : Fragment(R.layout.activity_menu_inicio) {
+class menu_inicio : Fragment() {
 
-    private lateinit var binding: ActivityMenuInicioBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityMenuInicioBinding.inflate(layoutInflater)
-        super.onCreate(savedInstanceState)
-    }
+    private var _binding: ActivityMenuInicioBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
-        binding.textView.text = "Fragment Inicio"
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_menu_inicio, container, false)
+    ): View {
+        _binding = ActivityMenuInicioBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnCalendario.setOnClickListener {
+            findNavController().navigate(R.id.page_calendario)
+        }
+
+        binding.btnObjetivos.setOnClickListener {
+            findNavController().navigate(R.id.page_objetivos)
+        }
+
+        binding.btnAjustes.setOnClickListener {
+            findNavController().navigate(R.id.page_configuraciones)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
