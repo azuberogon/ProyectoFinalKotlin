@@ -9,11 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primaryColor"
+        android:gravity="center"
+        android:padding="16dp"
         android:text="CALENDARIO"
         android:textColor="@android:color/white"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:padding="16dp" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 <GridLayout android:id="@+id/gridLayout"
     android:layout_width="match_parent"

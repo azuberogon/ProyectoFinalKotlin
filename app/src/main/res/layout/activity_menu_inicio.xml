@@ -1,23 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu_inicio">
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="418dp"
-        android:layout_height="614dp"
-        android:text="MENU INICIO PROXIMAMENTE "
-        android:textSize="100sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/tvNombreEmpresa"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="LifeSync"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="45sp"
+        android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/btnCalendario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primaryColor"
+        android:drawableEnd="@drawable/calendar"
+        android:drawableTint="@color/white"
+        android:text="CALENDARIO"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/btnObjetivos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OBJETIVOS"
+        android:drawableEnd="@drawable/activity"
+        android:drawableTint="@color/white"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/primaryColor"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnAjustes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryColor"
+        android:drawableEnd="@drawable/ajustes"
+        android:drawableTint="@color/white"
+        android:text="AJUSTES"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</LinearLayout>
