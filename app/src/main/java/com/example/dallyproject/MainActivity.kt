@@ -6,11 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
-import com.example.dallyproject.databinding.ActivityMainBinding
 import com.example.dallyproject.imanol.LocalDatabase
-import com.example.dallyproject.imanol.SignUpEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -30,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         editTxtContraseina = findViewById(R.id.inpTextContrasenia)
 
         btnCrearUsuario = findViewById(R.id.btnSignUp)
-        btnSiguiente = findViewById(R.id.btnSiguiente)
+        btnSiguiente = findViewById(R.id.btnLogin)
 
 
         btnSiguiente.setOnClickListener{

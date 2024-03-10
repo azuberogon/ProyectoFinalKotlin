@@ -4,78 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
+
 
     <!-- android:background="#80FFFFFF"  esto sirve para jugar con la transparencia del objeto-->
 
-
-    <EditText
-        android:id="@+id/inpTxtUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="308dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="@string/usuario"
+    <ImageView
+        android:id="@+id/iVwLogo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="#80FFFFFF"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/inpTxtUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inpTextContrasenia"
-        android:layout_width="wrap_content"
+        android:id="@+id/inpTxtUsuario"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/usuario"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iVwLogo" />
+
+    <EditText
+        android:id="@+id/inpTextContrasenia"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:hint="@string/contrase_a"
         android:inputType="text"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpTxtUsuario"
-        app:layout_constraintVertical_bias="0.255" />
+        app:layout_constraintTop_toBottomOf="@+id/inpTxtUsuario" />
 
     <Button
         android:id="@+id/btnSignUp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="@string/crear_usuario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/registrarse"
         android:textColor="@color/white"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <Button
-        android:id="@+id/btnSiguiente"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:text="@string/siguiente"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toEndOf="@+id/btnSignUp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="157dp"
-        android:layout_height="168dp"
-        app:layout_constraintBottom_toTopOf="@+id/inpTxtUsuario"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
-        app:srcCompat="@drawable/account" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/inpTextContrasenia" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
