@@ -34,16 +34,8 @@ class MainActivity : AppCompatActivity() {
 
 
         btnSiguiente.setOnClickListener{
-            GlobalScope.launch(Dispatchers.IO) {
-                val localDB = LocalDatabase.getInstance(this@MainActivity)
-                val existingUser = localDB.signUpDao().findByUsernameAndPassword(editTxtUsuario.text.toString(), editTxtContraseina.text.toString())
-                if (existingUser == null) {
-                    Toast.makeText(this@MainActivity, "El usuario no existe", Toast.LENGTH_SHORT).show()
-                }else {
-                    val intent = Intent(this@MainActivity, menu_inicio::class.java)
-                    startActivity(intent)
-                }
-            }
+            val intent = Intent(this@MainActivity, MainActivityInterna::class.java)
+            startActivity(intent)
         }
         btnCrearUsuario.setOnClickListener {
             val intent = Intent(this@MainActivity, com.example.dallyproject.imanol.Sign_up::class.java)
