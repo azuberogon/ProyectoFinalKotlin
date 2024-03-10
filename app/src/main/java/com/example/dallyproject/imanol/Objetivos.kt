@@ -1,57 +1,60 @@
 package com.example.dallyproject.imanol
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import com.example.dallyproject.R
-import com.example.dallyproject.databinding.ActivityObjetivosBinding
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dallyproject.R
+import com.example.dallyproject.databinding.ActivityObjetivosBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class Objetivos : Fragment() {
+class Objetivos : AppCompatActivity() {
 
     private lateinit var binding: ActivityObjetivosBinding
-    private lateinit var btnAgregar : Button
-    private lateinit var recyclerView : RecyclerView
+    private lateinit var btnAgregar: Button
+    private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: RecyclerViewAdapter
-    private lateinit var btnEliminarTodo : FloatingActionButton
+    private lateinit var btnEliminarTodo: FloatingActionButton
 
     private var listaNombres: ArrayList<Any> = ArrayList()
     private var listaLugares: ArrayList<Any> = ArrayList()
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = ActivityObjetivosBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-        btnAgregar = view.findViewById(R.id.btnAgregarTematica)
-        recyclerView = view.findViewById(R.id.recyclerViewObjetivos)
-        btnEliminarTodo = view.findViewById(R.id.btnVaciarRecyclerView)
+    // Bandera para controlar si la lista ya se ha actualizado una vez
+    private var listaActualizada: Boolean = false
 
-        adapter = RecyclerViewAdapter(requireContext(), listaNombres, listaLugares)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityObjetivosBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        btnAgregar = binding.btnAgregarTematica
+        recyclerView = binding.recyclerViewObjetivos
+        btnEliminarTodo = binding.btnVaciarRecyclerView
+
+        adapter = RecyclerViewAdapter(this, listaNombres, listaLugares)
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        displayData()
+        // Solo actualiza la lista la primera vez que se carga la actividad
+        if (!listaActualizada) {
+            displayData()
+            listaActualizada = true
+        }
 
         btnAgregar.setOnClickListener {
-            val intent = Intent(requireActivity(), Nuevos_objetivos::class.java)
+            val intent = Intent(this, Nuevos_objetivos::class.java)
             startActivity(intent)
-            displayData() // Llama a displayData después de agregar un nuevo elemento
+            // Después de agregar un nuevo elemento, actualiza la lista
+            displayData()
         }
+
         btnEliminarTodo.setOnClickListener {
             // Elimina todos los elementos de las listas
             listaNombres.clear()
@@ -60,7 +63,7 @@ class Objetivos : Fragment() {
             adapter.notifyDataSetChanged()
 
             GlobalScope.launch(Dispatchers.IO) {
-                val localDB = LocalDatabase.getInstance(requireContext())
+                val localDB = LocalDatabase.getInstance(this@Objetivos)
                 localDB.tematicasDao().deleteAll()
             }
         }
@@ -68,13 +71,17 @@ class Objetivos : Fragment() {
 
     private fun displayData() {
         GlobalScope.launch(Dispatchers.IO) {
-            val localDB = LocalDatabase.getInstance(requireContext())
+            val localDB = LocalDatabase.getInstance(this@Objetivos)
             val listaInstancias: List<TematicaEntity> = localDB.tematicasDao().getAll()
             withContext(Dispatchers.Main) {
                 if (listaInstancias.isEmpty()) {
                     // Manejar el caso en el que no hay datos, por ejemplo, mostrar un mensaje o una vista alternativa
-                    Toast.makeText(requireContext(), "No hay datos disponibles", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@Objetivos, "No hay datos disponibles", Toast.LENGTH_SHORT).show()
                 } else {
+                    // Limpiar las listas antes de actualizarlas
+                    listaNombres.clear()
+                    listaLugares.clear()
+
                     for (instancia in listaInstancias) {
                         listaNombres.add(instancia.nombre)
                         listaLugares.add(instancia.lugar)

@@ -13,10 +13,7 @@
         android:theme="@style/Theme.DallyProject"
         tools:targetApi="31">
         <activity
-            android:name=".richi.menu"
-            android:exported="false" />
-        <activity
-            android:name=".imanol.sign_up"
+            android:name=".imanol.Sign_up"
             android:exported="false" />
         <activity
             android:name=".imanol.Objetivos"

@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [TematicaEntity::class, SignUpEntity::class], version = 1)
+@Database(entities = [TematicaEntity::class, SignUpEntity::class], version = 2, exportSchema = false)
 abstract class LocalDatabase : RoomDatabase() {
     abstract fun tematicasDao(): TematicasDAO
     abstract fun signUpDao(): SignUpDAO

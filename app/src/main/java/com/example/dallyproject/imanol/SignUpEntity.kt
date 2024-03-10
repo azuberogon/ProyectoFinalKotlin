@@ -9,5 +9,5 @@ data class SignUpEntity(
     @PrimaryKey @ColumnInfo(name = "USUARIO") val usuario: String,
     @ColumnInfo(name = "EMAIL") val email: String,
     @ColumnInfo(name = "CONTRASENA") val contrasena: String,
-    @ColumnInfo(name = "CONTRASENA_REPETIDA") val contrasena_repetida: String
+    @ColumnInfo(name = "CONTRASENA_REPETIDA") val contrasenaRepetida: String
 )

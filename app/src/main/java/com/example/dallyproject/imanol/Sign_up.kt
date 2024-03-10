@@ -6,13 +6,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.dallyproject.MainActivity
 import com.example.dallyproject.R
 import com.example.dallyproject.loggin
+import com.example.dallyproject.menu_inicio
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class sign_up : AppCompatActivity() {
+class Sign_up : AppCompatActivity() {
 
     private lateinit var nombreUsuario : EditText
     private lateinit var email : EditText
@@ -32,7 +34,7 @@ class sign_up : AppCompatActivity() {
         val btnNavegacion = findViewById<Button>(R.id.btnLogIn)
 
         btnRegistro.setOnClickListener {
-            if (contraseina != contraseinaRepetida) {
+            if (contraseina.text.toString() != contraseinaRepetida.text.toString()) {
                 // Mostrar un mensaje de error si las contraseñas no coinciden
                 Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -40,23 +42,21 @@ class sign_up : AppCompatActivity() {
             val nuevoUsuario = SignUpEntity(nombreUsuario.text.toString(), email.text.toString(), contraseina.text.toString(), contraseinaRepetida.text.toString())
 
             GlobalScope.launch(Dispatchers.IO) {
-                val localDB = LocalDatabase.getInstance(this@sign_up)
+                val localDB = LocalDatabase.getInstance(this@Sign_up)
                 val existingUser = localDB.signUpDao().findByUsername(nuevoUsuario.usuario)
                 if (existingUser != null) {
-                    // Mostrar un mensaje de error si el usuario ya existe
-                    runOnUiThread {
-                        Toast.makeText(this@sign_up, "El usuario ya existe", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
+                    Toast.makeText(this@Sign_up, "El usuario ya existe", Toast.LENGTH_SHORT).show()
+
+                }else {
                     localDB.signUpDao().insert(nuevoUsuario)
-                    val intent = Intent(this@sign_up, loggin::class.java)
+                    val intent = Intent(this@Sign_up, menu_inicio::class.java)
                     startActivity(intent)
                 }
             }
         }
 
         btnNavegacion.setOnClickListener {
-            val intent = Intent(this, loggin::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
