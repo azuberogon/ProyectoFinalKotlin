@@ -7,7 +7,7 @@ import android.widget.Button
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.dallyproject.databinding.ActivityMainBinding
-import com.example.dallyproject.richi.menu
+
 
 class MainActivity : AppCompatActivity() {
 
