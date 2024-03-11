@@ -11,7 +11,7 @@ class calendario_Dia : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_calendario_dia)
 
         val recyclerView = findViewById<RecyclerView>(R.id.RecyclerDia)
         recyclerView.layoutManager = LinearLayoutManager(this)

@@ -8,23 +8,30 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dallyproject.R
 
-class ActividadesDiariasAdapter(private val items: List<String>) : RecyclerView.Adapter<ActividadesDiariasAdapter.ViewHolder>() {
+class ActividadesDiariasAdapter(private val items: List<Item>) : RecyclerView.Adapter<ActividadesDiariasAdapter.ItemViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.txtActDia)
-        val checkBox: CheckBox = view.findViewById(R.id.checkActDia)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_recycler_dia, parent, false)
+        return ItemViewHolder(itemView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_recycler_dia, parent, false)
-        return ViewHolder(view)
-    }
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+        val currentItem = items[position]
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = items[position]
-        // Configura aquí el estado del checkbox si lo necesitas
+        holder.textView.text = currentItem.text
+        holder.checkBox.isChecked = currentItem.isChecked
+
+        holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
+            currentItem.isChecked = isChecked
+        }
     }
 
     override fun getItemCount() = items.size
+
+    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val textView: TextView = itemView.findViewById(R.id.text_view)
+        val checkBox: CheckBox = itemView.findViewById(R.id.check_box)
+    }
 }
+
+data class Item(val text: String, var isChecked: Boolean)
