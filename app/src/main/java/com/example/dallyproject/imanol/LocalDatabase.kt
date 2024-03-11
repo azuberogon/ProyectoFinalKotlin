@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.dallyproject.hugo.ActividadDAO
+import com.example.dallyproject.hugo.ActividadEntity
 
 
-@Database(entities = [TematicaEntity::class, SignUpEntity::class], version = 2, exportSchema = false)
+@Database(entities = [TematicaEntity::class, SignUpEntity::class, ActividadEntity::class], version = 3, exportSchema = false)
 
 abstract class LocalDatabase : RoomDatabase() {
     abstract fun tematicasDao(): TematicasDAO
     abstract fun signUpDao(): SignUpDAO
+    abstract fun actividadDao(): ActividadDAO
 
 
     companion object {

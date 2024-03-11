@@ -8,11 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dallyproject.R
 
-class RecyclerViewAdapter(
+class RecyclerViewAdapterObjetivos(
     private val context: Context, // Pasar el contexto aquí
     private val nombresID: ArrayList<Any>,
     private val lugaresID: ArrayList<Any>
-) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+) : RecyclerView.Adapter<RecyclerViewAdapterObjetivos.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val v = LayoutInflater.from(context).inflate(R.layout.tematica_entry, parent, false)

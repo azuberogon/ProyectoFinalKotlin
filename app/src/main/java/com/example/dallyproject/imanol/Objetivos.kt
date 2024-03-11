@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dallyproject.R
 import com.example.dallyproject.databinding.ActivityObjetivosBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.Dispatchers
@@ -21,7 +20,7 @@ class Objetivos : AppCompatActivity() {
     private lateinit var binding: ActivityObjetivosBinding
     private lateinit var btnAgregar: Button
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: RecyclerViewAdapter
+    private lateinit var adapter: RecyclerViewAdapterObjetivos
     private lateinit var btnEliminarTodo: FloatingActionButton
 
     private var listaNombres: ArrayList<Any> = ArrayList()
@@ -40,7 +39,7 @@ class Objetivos : AppCompatActivity() {
         recyclerView = binding.recyclerViewObjetivos
         btnEliminarTodo = binding.btnVaciarRecyclerView
 
-        adapter = RecyclerViewAdapter(this, listaNombres, listaLugares)
+        adapter = RecyclerViewAdapterObjetivos(this, listaNombres, listaLugares)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
