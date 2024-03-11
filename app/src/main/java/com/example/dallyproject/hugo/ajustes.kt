@@ -9,15 +9,13 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.dallyproject.R
 import com.example.dallyproject.databinding.ActivityAjustesBinding
-import com.google.android.material.switchmaterial.SwitchMaterial
+import com.example.dallyproject.hugo.ayuda.SocketTCPCliente
+import java.io.IOException
 
-class ajustes : Fragment(R.layout.activity_ajustes) {
+class Ajustes : Fragment(R.layout.activity_ajustes) {
 
     private var _binding: ActivityAjustesBinding? = null
     private val binding get() = _binding!!
-
-    // This lateinit var might not be necessary if you're using ViewBinding to access the switch.
-    // private lateinit var swDarkMode: SwitchMaterial
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,15 +28,19 @@ class ajustes : Fragment(R.layout.activity_ajustes) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Using ViewBinding, you don't need to use findViewById
-        val swDarkMode = binding.swDarkMode
-
-        swDarkMode.setOnCheckedChangeListener { _, isSelected ->
+        // Configuración del modo oscuro
+        binding.swDarkMode.setOnCheckedChangeListener { _, isSelected ->
             if (isSelected) {
                 enableDarkMode()
             } else {
                 disableDarkMode()
             }
+        }
+
+        // Envío de texto al servidor
+        binding.buttonSave.setOnClickListener {
+            val textoAyuda = binding.editTextTitle.text.toString()
+            enviarTextoAlServidor(textoAyuda)
         }
     }
 
@@ -52,8 +54,22 @@ class ajustes : Fragment(R.layout.activity_ajustes) {
         (activity as? AppCompatActivity)?.delegate?.applyDayNight()
     }
 
+    private fun enviarTextoAlServidor(texto: String) {
+        Thread {
+            try {
+                val cliente = SocketTCPCliente("192.168.0.1", 24000)
+                cliente.start()
+                cliente.sendMessage(texto)
+                cliente.stop()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+        }.start()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null // Clear the ViewBinding reference
     }
+
 }

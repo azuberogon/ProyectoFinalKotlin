@@ -45,7 +45,7 @@
             android:name=".hugo.diario"
             android:exported="false" />
         <activity
-            android:name=".calendario_Dia"
+            android:name=".hugo.calendario_Dia"
             android:exported="false" />
         <activity
             android:name=".hugo.ajustes"
