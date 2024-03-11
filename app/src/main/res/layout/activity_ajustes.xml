@@ -33,12 +33,10 @@
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="232dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginTop="624dp"
         android:backgroundTint="@color/primaryColor"
-
-        android:text="Enviar
-"
+        android:text="Enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +45,7 @@
     <Switch
         android:id="@+id/swDarkMode"
         android:layout_width="261dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:text="Modo Oscuro"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,6 +81,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.349" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,22 +1,26 @@
 package com.example.dallyproject.hugo
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.dallyproject.R
 import com.example.dallyproject.databinding.ActivityAjustesBinding
 import com.example.dallyproject.hugo.ayuda.SocketTCPCliente
+import com.example.dallyproject.imanol.Nuevos_objetivos
 import java.io.IOException
 
 class Ajustes : Fragment(R.layout.activity_ajustes) {
 
+    private lateinit var botonDiaMes:Button
+
     private var _binding: ActivityAjustesBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

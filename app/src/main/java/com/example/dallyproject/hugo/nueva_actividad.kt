@@ -8,8 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import com.example.dallyproject.R
 import com.example.dallyproject.imanol.LocalDatabase
-import com.example.dallyproject.imanol.Objetivos
-import com.example.dallyproject.imanol.TematicaEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

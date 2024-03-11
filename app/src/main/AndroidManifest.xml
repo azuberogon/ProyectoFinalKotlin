@@ -14,9 +14,9 @@
         android:theme="@style/Theme.DallyProject"
         tools:targetApi="31">
 
-        <activity
-            android:name=".Maps"
-            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".Maps"-->
+<!--            android:exported="true" />-->
         <activity
             android:name=".chat.activity.chat"
             android:exported="false" />

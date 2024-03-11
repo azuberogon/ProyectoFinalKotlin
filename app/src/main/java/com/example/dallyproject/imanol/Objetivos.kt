@@ -1,6 +1,3 @@
-package com.example.dallyproject.imanol
-
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,7 +5,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dallyproject.databinding.ActivityObjetivosBinding
+import com.example.dallyproject.R
+import com.example.dallyproject.imanol.LocalDatabase
+import com.example.dallyproject.imanol.Nuevos_objetivos
+import com.example.dallyproject.imanol.RecyclerViewAdapterObjetivos
+import com.example.dallyproject.imanol.TematicaEntity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -17,7 +18,6 @@ import kotlinx.coroutines.withContext
 
 class Objetivos : AppCompatActivity() {
 
-    private lateinit var binding: ActivityObjetivosBinding
     private lateinit var btnAgregar: Button
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: RecyclerViewAdapterObjetivos
@@ -26,34 +26,21 @@ class Objetivos : AppCompatActivity() {
     private var listaNombres: ArrayList<Any> = ArrayList()
     private var listaLugares: ArrayList<Any> = ArrayList()
 
-    // Bandera para controlar si la lista ya se ha actualizado una vez
-    private var listaActualizada: Boolean = false
-
-    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityObjetivosBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_objetivos)
 
-        btnAgregar = binding.btnAgregarTematica
-        recyclerView = binding.recyclerViewObjetivos
-        btnEliminarTodo = binding.btnVaciarRecyclerView
+        btnAgregar = findViewById(R.id.btnAgregarTematica)
+        recyclerView = findViewById(R.id.recyclerViewObjetivos)
+        btnEliminarTodo = findViewById(R.id.btnVaciarRecyclerView)
 
         adapter = RecyclerViewAdapterObjetivos(this, listaNombres, listaLugares)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Solo actualiza la lista la primera vez que se carga la actividad
-        if (!listaActualizada) {
-            displayData()
-            listaActualizada = true
-        }
-
         btnAgregar.setOnClickListener {
             val intent = Intent(this, Nuevos_objetivos::class.java)
             startActivity(intent)
-            // Después de agregar un nuevo elemento, actualiza la lista
-            displayData()
         }
 
         btnEliminarTodo.setOnClickListener {
@@ -68,6 +55,12 @@ class Objetivos : AppCompatActivity() {
                 localDB.tematicasDao().deleteAll()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Actualiza la lista cada vez que la actividad se reanuda
+        displayData()
     }
 
     private fun displayData() {
