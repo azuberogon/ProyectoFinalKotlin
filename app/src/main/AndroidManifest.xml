@@ -15,6 +15,15 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".Maps"
+            android:exported="true" />
+        <activity
+            android:name=".chat.activity.chat"
+            android:exported="false" />
+       <!-- <activity
+            android:name=".chat.Chat"
+            android:exported="false" />-->
+        <activity
             android:name=".imanol.Sign_up"
             android:exported="false" />
         <activity
@@ -30,9 +39,6 @@
             android:name=".menu_inicio"
             android:exported="false" />
         <activity
-            android:name=".loggin"
-            android:exported="false" />
-        <activity
             android:name=".hugo.diario"
             android:exported="false" />
         <activity
@@ -43,7 +49,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"> <!-- true-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,6 +60,9 @@
             android:name=".MainActivityInterna"
             android:exported="false" />
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
     </application>
 
 </manifest>

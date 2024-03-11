@@ -1,5 +1,6 @@
 package com.example.dallyproject.imanol
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -29,6 +30,7 @@ class Objetivos : AppCompatActivity() {
     // Bandera para controlar si la lista ya se ha actualizado una vez
     private var listaActualizada: Boolean = false
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityObjetivosBinding.inflate(layoutInflater)
