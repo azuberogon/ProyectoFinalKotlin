@@ -1,9 +1,15 @@
-//import org.jetbrains.kotlin.gradle.internal.kapt.incremental.UnknownSnapshot.classpath
 
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
 
-
+    dependencies {
+        // tus dependencias aquí
+    }
+}
 
 plugins {
     id("com.android.application") version "8.2.2" apply false
@@ -16,6 +22,12 @@ plugins {
 subprojects {
     apply(plugin = "org.jetbrains.dokka")
 }
+
+
+
+
+
+
 
 // esta parte es del calendario pero creo que es una version antigua, no estoy muy seguro
 //buildscript {

@@ -44,4 +44,7 @@
     <string name="txtExplicacion">Escribe aquí la temática de tu nueva barra de progreso y el lugar en el que se va a llevar a cabo</string>
     <string name="lugar">Lugar</string>
     <string name="guardar2">Guardar</string>
+    <string name="TipoMensaje">tipo de mensaje\n</string>
+    <string name="type_message">tipo de mensaje\n</string>
+
 </resources>
