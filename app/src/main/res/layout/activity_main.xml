@@ -16,7 +16,7 @@
         android:layout_height="160dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="8dp"
-        android:background="#80FFFFFF"
+        android:background="@color/white"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/inpTxtUsuario"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,8 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iVwLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/iVwLogo"
+        android:backgroundTint="@color/blue_500"/>
 
     <EditText
         android:id="@+id/inpTextContrasenia"
@@ -50,7 +51,8 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpTxtUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/inpTxtUsuario"
+        android:backgroundTint="@color/blue_500"/>
 
     <Button
         android:id="@+id/btnSignUp"
@@ -59,11 +61,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/button_rounded_border"
         android:text="@string/registrarse"
         android:textColor="@color/white"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        />
 
     <Button
         android:id="@+id/btnLogin"
@@ -72,10 +77,62 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/login"
+        android:text="@string/acceder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inpTextContrasenia" />
+
+    <TextView
+        android:id="@+id/textViewRedes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/iniciar_sesi_n_con"
+        android:textColor="@color/material_dynamic_neutral60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+    <ImageButton
+        android:id="@+id/iButtonFacebook"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/facebook"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRedes"
+        app:srcCompat="@drawable/facebook" />
+
+    <ImageButton
+        android:id="@+id/iButtonGoogle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/google"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/iButtonFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRedes"
+        app:srcCompat="@drawable/google" />
+
+    <ImageButton
+        android:id="@+id/iButtonTwitter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/twitter"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/iButtonFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRedes"
+        app:srcCompat="@drawable/twitter" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

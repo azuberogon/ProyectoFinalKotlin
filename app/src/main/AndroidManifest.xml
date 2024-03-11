@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!--Permisos de internet, necesario para realizar llamadas HTTP-->
+    <!--Permisos de internet-->
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
@@ -37,9 +37,6 @@
             android:exported="false" />
         <activity
             android:name=".menu_inicio"
-            android:exported="false" />
-        <activity
-            android:name=".loggin"
             android:exported="false" />
         <activity
             android:name=".hugo.diario"

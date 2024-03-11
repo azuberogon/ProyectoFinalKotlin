@@ -44,8 +44,13 @@
     <string name="txtExplicacion">Escribe aquí la temática de tu nueva barra de progreso y el lugar en el que se va a llevar a cabo</string>
     <string name="lugar">Lugar</string>
     <string name="guardar2">Guardar</string>
+    <string name="login">Acceder</string>
     <string name="registrarse">Registrarse</string>
-    <string name="login">LOGIN</string>
-    <string name="TipoMensaje">tipo de mensaje\n</string>
-    <string name="type_message">tipo de mensaje\n</string>
+    <string name="acceder">Acceder</string>
+    <string name="iniciar_sesi_n_con">Iniciar sesión con:</string>
+    <string name="facebook">facebook</string>
+    <string name="google">google</string>
+    <string name="twitter">twitter</string>
+
+
 </resources>
