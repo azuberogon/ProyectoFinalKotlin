@@ -30,9 +30,6 @@
             android:name=".menu_inicio"
             android:exported="false" />
         <activity
-            android:name=".loggin"
-            android:exported="false" />
-        <activity
             android:name=".hugo.diario"
             android:exported="false" />
         <activity
