@@ -58,6 +58,7 @@ tasks.dokkaGfm.configure {
 
 dependencies {
 
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
     kapt("androidx.room:room-compiler:$room_version")

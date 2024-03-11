@@ -51,6 +51,7 @@
     <string name="facebook">facebook</string>
     <string name="google">google</string>
     <string name="twitter">twitter</string>
+    <string name="type_message">"nose"</string>
 
 
 </resources>
