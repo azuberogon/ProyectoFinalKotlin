@@ -1,8 +1,15 @@
 $dokka.format:javadoc-v1
 $dokka.linkExtension:html
-
+$dokka.location:////PointingToDeclaration/[root]/package-summary.html
+$dokka.location:/ActividadDAO///PointingToDeclaration/[root]/ActividadDAO.html
+$dokka.location:/Objetivos///PointingToDeclaration/[root]/Objetivos.html
+$dokka.location:com.example.dallyproject.hugo/RecyclerViewAdapterActividades.MyViewHolder///PointingToDeclaration/com/example/dallyproject/hugo/RecyclerViewAdapterActividades.MyViewHolder.html
+$dokka.location:com.example.dallyproject.imanol/LocalDatabase.Companion///PointingToDeclaration/com/example/dallyproject/imanol/LocalDatabase.Companion.html
+$dokka.location:com.example.dallyproject.imanol/RecyclerViewAdapterObjetivos.MyViewHolder///PointingToDeclaration/com/example/dallyproject/imanol/RecyclerViewAdapterObjetivos.MyViewHolder.html
 com.example.dallyproject
-com.example.dallyproject.Hugo
-com.example.dallyproject.Imanol
-com.example.dallyproject.db
+com.example.dallyproject.chat.activity
+com.example.dallyproject.chat.model
+com.example.dallyproject.hugo
+com.example.dallyproject.hugo.ayuda
+com.example.dallyproject.imanol
 

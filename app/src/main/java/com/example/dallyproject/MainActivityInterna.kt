@@ -8,12 +8,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.dallyproject.databinding.ActivityMainInternaBinding
-import com.example.dallyproject.hugo.calendario_Dia
+import com.example.dallyproject.hugo.Calendario_Dia
 
+/**
+ * Actividad principal interna de la aplicación. Contiene la lógica para la navegación entre fragmentos
+ * y acciones asociadas con la barra de navegación inferior.
+ */
 class MainActivityInterna : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainInternaBinding
-    private lateinit var btnDiaMes:Button
+    private lateinit var btnDiaMes: Button
+
+    /**
+     * Se llama cuando la actividad se está iniciando. Aquí es donde se debe inflar el diseño de la actividad,
+     * inicializar las vistas y realizar cualquier otra inicialización necesaria.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainInternaBinding.inflate(layoutInflater)
@@ -21,7 +30,7 @@ class MainActivityInterna : AppCompatActivity() {
 
         btnDiaMes = findViewById(R.id.botonDiaMes)
         btnDiaMes.setOnClickListener {
-            val intent = Intent(this, calendario_Dia::class.java)
+            val intent = Intent(this, Calendario_Dia::class.java)
             startActivity(intent)
         }
 
@@ -48,4 +57,3 @@ class MainActivityInterna : AppCompatActivity() {
         }
     }
 }
-

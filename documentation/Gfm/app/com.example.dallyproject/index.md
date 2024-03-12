@@ -6,9 +6,8 @@
 
 | Name | Summary |
 |---|---|
-| [calendario](calendario/index.md) | [androidJvm]<br>class [calendario](calendario/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html) |
-| [calendario_Dia](calendario_-dia/index.md) | [androidJvm]<br>class [calendario_Dia](calendario_-dia/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html) |
-| [loggin](loggin/index.md) | [androidJvm]<br>class [loggin](loggin/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html) |
-| [MainActivity](-main-activity/index.md) | [androidJvm]<br>class [MainActivity](-main-activity/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html) |
-| [menu_inicio](menu_inicio/index.md) | [androidJvm]<br>class [menu_inicio](menu_inicio/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html) |
-| [Sqlite](-sqlite/index.md) | [androidJvm]<br>open class [Sqlite](-sqlite/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html) |
+| [Calendario](-calendario/index.md) | [androidJvm]<br>class [Calendario](-calendario/index.md) : [Fragment](https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html)<br>Fragmento que muestra un calendario básico con los días de la semana y los números del 1 al 31. |
+| [MainActivity](-main-activity/index.md) | [androidJvm]<br>class [MainActivity](-main-activity/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html)<br>Actividad principal que muestra la pantalla de inicio de sesión de la aplicación. |
+| [MainActivityInterna](-main-activity-interna/index.md) | [androidJvm]<br>class [MainActivityInterna](-main-activity-interna/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html)<br>Actividad principal interna de la aplicación. Contiene la lógica para la navegación entre fragmentos y acciones asociadas con la barra de navegación inferior. |
+| [Maps](-maps/index.md) | [androidJvm]<br>class [Maps](-maps/index.md) : [AppCompatActivity](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html), OnMapReadyCallback<br>Actividad que muestra un mapa con una ubicación específica marcada con un marcador. |
+| [menu_inicio](menu_inicio/index.md) | [androidJvm]<br>class [menu_inicio](menu_inicio/index.md) : [Fragment](https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html)<br>Fragmento que muestra el menú de inicio con opciones para navegar a diferentes partes de la aplicación. |

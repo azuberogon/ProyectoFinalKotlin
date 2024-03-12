@@ -12,12 +12,18 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+/**
+ * Actividad que permite al usuario agregar nuevos objetivos o temáticas.
+ * El usuario puede ingresar un nombre y un lugar para el nuevo objetivo.
+ * Al guardar, se inserta en la base de datos local y se redirige a la ventana de Objetivos.
+ */
 class Nuevos_objetivos : AppCompatActivity() {
-    private lateinit var nombre : EditText
-    private lateinit var lugar : EditText
+    private lateinit var nombre: EditText
+    private lateinit var lugar: EditText
 
-    private lateinit var btnCancelar : Button
-    private lateinit var btnGuardar : Button
+    private lateinit var btnCancelar: Button
+    private lateinit var btnGuardar: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nuevos_objetivos)
@@ -28,14 +34,19 @@ class Nuevos_objetivos : AppCompatActivity() {
         btnCancelar = findViewById(R.id.btnCancelar)
         btnGuardar = findViewById(R.id.btnGuardar)
 
+        // Listener para el botón de cancelar
         btnCancelar.setOnClickListener {
-            finish()
+            finish() // Finaliza la actividad actual
         }
+
+        // Listener para el botón de guardar
         btnGuardar.setOnClickListener {
+            // Crea un objeto TematicaEntity con los datos ingresados por el usuario
             val tematica = TematicaEntity(nombre.text.toString(), lugar.text.toString())
 
             val localDB = LocalDatabase.getInstance(this)
 
+            // Inserta la temática en la base de datos local en un hilo de fondo
             GlobalScope.launch(Dispatchers.IO) {
                 try {
                     val insertado = localDB.tematicasDao().insertAll(tematica)

@@ -12,7 +12,7 @@
 
     <fragment
         android:id="@+id/page_calendario"
-        android:name="com.example.dallyproject.calendario"
+        android:name="com.example.dallyproject.Calendario"
         tools:layout="@layout/activity_calendario" />
 
     <fragment

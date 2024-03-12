@@ -12,23 +12,28 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-
+/**
+ * Actividad principal que muestra la pantalla de inicio de sesión de la aplicación.
+ */
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var editTxtUsuario:EditText
-    private lateinit var editTxtContraseina:EditText
-    private lateinit var btnSiguiente : Button
-    private lateinit var btnCrearUsuario : Button
+    private lateinit var editTxtUsuario: EditText
+    private lateinit var editTxtContrasenia: EditText
+    private lateinit var btnSiguiente: Button
+    private lateinit var btnCrearUsuario: Button
+
+    /**
+     * Se llama cuando se crea la actividad. Aquí es donde se inicializan las vistas y se configuran los listeners.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         editTxtUsuario = findViewById(R.id.inpTxtUsuario)
-        editTxtContraseina = findViewById(R.id.inpTextContrasenia)
+        editTxtContrasenia = findViewById(R.id.inpTextContrasenia)
 
         btnCrearUsuario = findViewById(R.id.btnSignUp)
         btnSiguiente = findViewById(R.id.btnLogin)
-
 
         btnSiguiente.setOnClickListener {
             val contexto = this@MainActivity
@@ -36,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 val localDB = LocalDatabase.getInstance(contexto)
                 val existingUser = localDB.signUpDao().findByUsernameAndPassword(
                     editTxtUsuario.text.toString(),
-                    editTxtContraseina.text.toString()
+                    editTxtContrasenia.text.toString()
                 )
                 if (existingUser == null) {
                     withContext(Dispatchers.Main) {

@@ -33,13 +33,13 @@
             android:name=".imanol.Nuevos_objetivos"
             android:exported="false" />
         <activity
-            android:name=".hugo.nueva_actividad"
+            android:name=".hugo.Nueva_Actividad"
             android:exported="false" />
         <activity
             android:name=".menu_inicio"
             android:exported="false" />
         <activity
-            android:name=".hugo.diario"
+            android:name=".hugo.Diario"
             android:exported="false" />
         <activity
             android:name=".hugo.calendario_Dia"
