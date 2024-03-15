@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".chat.activity.chat">
 
+
+
     <LinearLayout
         android:id="@+id/l1"
         android:layout_width="match_parent"
@@ -64,9 +66,15 @@
                 android:layout_weight="1"
                 android:inputType="text"
                 android:background="@color/colorTextBackground"
-                android:hint="Tipo mensaje"
+                android:hint="@string/type_message"
                 android:padding="12dp"
                 android:textColor="@color/colorText" />
+
+
+
         </LinearLayout>
+
+
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
